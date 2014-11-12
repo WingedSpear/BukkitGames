@@ -15,7 +15,6 @@ import org.bukkit.potion.PotionEffectType;
 
 public class BGKit {
 	private static BGMain plugin;
-	static Logger log = Logger.getLogger("Minecraft");
 	static HashMap<Player, String> KIT = new HashMap<Player, String>();
 	public static ArrayList<String> kits = new ArrayList<String>();
 
@@ -229,18 +228,18 @@ public class BGKit {
 					+ " as your kit.");
 
 			if (plugin.winner(player))
-				player.setDisplayName("ง8[" + kitname + "] งr" + ChatColor.GOLD
+				player.setDisplayName("ยง8[" + kitname + "] ยงr" + ChatColor.GOLD
 						+ player.getName() + ChatColor.WHITE);
 			else if (player.hasPermission("bg.admin.color")
 					|| player.hasPermission("bg.admin.*"))
-				player.setDisplayName("ง8[" + kitname + "] งr" + ChatColor.RED
+				player.setDisplayName("ยง8[" + kitname + "] ยงr" + ChatColor.RED
 						+ player.getName() + ChatColor.WHITE);
 			else if (player.hasPermission("bg.vip.color")
 					|| player.hasPermission("bg.vip.*"))
-				player.setDisplayName("ง8[" + kitname + "] งr" + ChatColor.BLUE
+				player.setDisplayName("ยง8[" + kitname + "] ยงr" + ChatColor.BLUE
 						+ player.getName() + ChatColor.WHITE);
 			else
-				player.setDisplayName("ง8[" + kitname + "] งr"
+				player.setDisplayName("ยง8[" + kitname + "] ยงr"
 						+ ChatColor.WHITE + player.getName() + ChatColor.WHITE);
 		} else {
 			BGChat.printPlayerChat(player, plugin.NO_KIT_MSG);
